@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.4s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+   /* margin-left: -200px;*/
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .salut li{
+    list-style: none;
+    display: inline;
+}
+.navbar .salut li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.2s ease;
+}
+.navbar .salut li a:hover{
+    color: crimson;
+}
+.navbar.sticky .salut li a:hover{
+    color: #000;
+}
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.home{
+    display: flex;
+    background: url("../Image/hisoka.jpg") center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.container {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+  .salut.is-open{
+      transform: translateX(0);
+  }
+
+
+  .photo{
+      width: 120px;
+      position: absolute;
+      left: 220px;
+      border-radius: 10px 0;
+  }
+  .overlay {
+    position: relative;
+    bottom: 0;
+    left: 6.25em;
+    right: 0;
+    background-color: crimson;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 1s ease;
+  }
+  .text1 {
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .containerphoto:hover .overlay {
+    height: 50px;
+    width: 120px;
+  }
+
+section{
+      padding: 100px 0;
+  }
+
+.about, .services, .skills{
+    font-family: 'Poppins', sans-serif;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about .title::after{
+    content: "Who I am";
+}
+.about .about-content, .services, .serv-content, .skills .skills-content, .contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 30px 0;
+}
+.about .about-content .right {
+    width: 55%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+}
+.about .about-content .right .text{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.cv{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    background: crimson;
+    color: #fff;
+    padding: 1px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.cv:hover{
+    color: crimson;
+    background: none;
+}
+.services{
+    color: #fff;
+    background: #111;
+}
+.services .title::before{
+    background: #fff;
+}
+.services .title::after{
+    background: #111;
+    content: "What I Provide";
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: crimson;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 40px;
+    color: crimson;
+    transition: color 1.5s ease;
+}
+.services .serv-content .card:hover i{
+    color: #222;
+}
+.services .serv-content .card .textserv{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7 0;
+}
+
+.skills .title::after{
+    content: "What I Know";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 899px){
+     .salut{
+        position: absolute;
+        display: grid;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        height: 500px;
+        padding: 55px;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out;
+    }
+    .container{
+        display: inline-block;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+
+.skills .skills-content .left .textleft{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 600;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background-color: lightgray;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 60%;
+}
+
+.skills-content .right .php::before{
+    width: 70%;
+}
+
+.skills-content .right .jss::before{
+    width: 50%;
+}
+
+.skills-content .right .mysql::before{
+    width: 60%;
+}
+
+
+.contact {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #111;
+}
+.contact .title::before{
+    background: #fff;
+}
+.contact .title::after{
+    background: #111;
+    content: "Get In Touch";
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+    color: #fff;
+}
+.contact .contact-content .info .sub-title{
+    color:#fff;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field, .contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px; 
+    /* width: 100%; */
+}
+.contact .right form .button button{
+    font-size: 20px;
+    font-weight: 650;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 20% / 10% 40%;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    background-color: crimson;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+footer{
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 958px){
+    .imagedev{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1100px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 530px) {
+    .photo{
+        width: 80px;
+        position: absolute;
+        left: 6em;
+    }
+
+    .services .serv-content .card{
+        width: 100%;
+    }
+    .home-content{
+        position: relative;
+        left: -4em;
+    }
+}
+@media (max-width: 453px) {
+    section .title::after{
+        position: absolute;
+        bottom: -41px;
+        left: 50%;
+        font-size: 20px;
+        color: crimson;
+        padding: 5px;
+        background: #fff;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 650px){
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
